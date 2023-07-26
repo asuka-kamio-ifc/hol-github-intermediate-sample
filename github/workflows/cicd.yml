@@ -1,11 +1,11 @@
 name: .NET
 
 on:
-  xxx: # xxxをプッシュイベントに変えてください
+  push: # xxxをプッシュイベントに変えてください
     branches: [ "" ] # mainブランチを対象にしてください
-  xxx: # xxxをプルリクエストイベントに変えてください
+  pull_request: # xxxをプルリクエストイベントに変えてください
     branches: [ "" ] # mainブランチを対象にしてください
-  xxx: # xxxを手動イベントに変えてください
+  workflow_dispatch: # xxxを手動イベントに変えてください
 
 jobs:
   build:
