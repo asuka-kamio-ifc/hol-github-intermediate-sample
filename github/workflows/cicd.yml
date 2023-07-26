@@ -13,13 +13,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - # チェックアウトアクションを記入してください
+    - uses: actions/checkout@v3
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      # この行にBuildステップに対応する形でdotnetのリストアコマンドを記入してください
+      run: dotnet build --no-restore
     - name: Build
       run: dotnet build --no-restore
     - name: Publish
@@ -28,5 +28,5 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: dotnet-webapp
-        path: #ビルド成果物のパスを記入してください
+        path: ./src/SampleApplication.csproj
         
