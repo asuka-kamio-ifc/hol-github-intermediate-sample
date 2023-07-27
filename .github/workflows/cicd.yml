@@ -1,5 +1,8 @@
 name: .NET
 
+env:
+  AZURE_WEBAPP_NAME: your-app-name    # Azure Web Appに設定した名前に変えてください
+  AZURE_WEBAPP_PACKAGE_PATH: '.'   
 on:
   push: # xxxをプッシュイベントに変えてください
     branches: [ "main" ] # mainブランチを対象にしてください
